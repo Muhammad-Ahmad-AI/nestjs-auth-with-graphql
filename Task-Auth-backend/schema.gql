@@ -1,0 +1,51 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type LoginResponse {
+  token: String!
+  user: User!
+}
+
+type Mutation {
+  createTask(data: TaskInput!): TaskResponse!
+  login(loginData: LoginInput!): LoginResponse!
+  register(createUserDto: UserInput!): LoginResponse!
+}
+
+type Query {
+  getTask(id: Float!): TaskResponse!
+  hello: String!
+  listTasks: [TaskResponse!]!
+  user(email: String!): userResponse!
+}
+
+input TaskInput {
+  name: String!
+}
+
+type TaskResponse {
+  id: Float!
+  name: String
+}
+
+type User {
+  email: String!
+  name: String!
+  password: String!
+}
+
+input UserInput {
+  email: String!
+  name: String!
+  password: String!
+}
+
+type userResponse {
+  name: String!
+}
